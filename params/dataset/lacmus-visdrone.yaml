@@ -1,0 +1,22 @@
+type: "visdrone"
+
+dataset_path: "data/lacmus_visdrone_640_6_4"
+
+kwargs:
+  suffix: "jpg"
+  use_cache: true
+
+train:
+  image_dir: "train/images"
+  label: "train/annotations"
+
+val:
+  image_dir: "test/images"
+  label: "test/annotations"
+
+test:
+  test_dir: "test"
+
+segmentaion_enabled: false
+
+names: ['pedestrian', 'people', 'bicycle', 'car', 'van', 'truck', 'tricycle', 'awning-tricycle', 'bus', 'motor']

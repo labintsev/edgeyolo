@@ -1,0 +1,1354 @@
+2023-03-28 11:44:11 | INFO    | edgeyolo.models:__init__:50 - loading models from weight /home/balezz/PycharmProjects/edgeyolo/models/edgeyolo_visdrone.pth
+2023-03-28 11:44:13 | INFO    | edgeyolo.train.trainer:before_train:333 - params:
+╒════════════════════════════════╤═══════════════════════════════════════╕
+│ Keywords                       │ Values                                │
+╞════════════════════════════════╪═══════════════════════════════════════╡
+│ model_cfg                      │ params/model/edgeyolo_lacmus.yaml     │
+├────────────────────────────────┼───────────────────────────────────────┤
+│ weights                        │ models/edgeyolo_visdrone.pth          │
+├────────────────────────────────┼───────────────────────────────────────┤
+│ use_cfg                        │ False                                 │
+├────────────────────────────────┼───────────────────────────────────────┤
+│ output_dir                     │ output/train/edgeyolo_lacmus_visdrone │
+├────────────────────────────────┼───────────────────────────────────────┤
+│ save_checkpoint_for_each_epoch │ True                                  │
+├────────────────────────────────┼───────────────────────────────────────┤
+│ log_file                       │ log.txt                               │
+├────────────────────────────────┼───────────────────────────────────────┤
+│ dataset_cfg                    │ data/lacmus-visdrone.yaml             │
+├────────────────────────────────┼───────────────────────────────────────┤
+│ batch_size_per_gpu             │ 1                                     │
+├────────────────────────────────┼───────────────────────────────────────┤
+│ loader_num_workers             │ 1                                     │
+├────────────────────────────────┼───────────────────────────────────────┤
+│ num_threads                    │ 1                                     │
+├────────────────────────────────┼───────────────────────────────────────┤
+│ device                         │ [0]                                   │
+├────────────────────────────────┼───────────────────────────────────────┤
+│ fp16                           │ False                                 │
+├────────────────────────────────┼───────────────────────────────────────┤
+│ cudnn_benchmark                │ False                                 │
+├────────────────────────────────┼───────────────────────────────────────┤
+│ optimizer                      │ SGD                                   │
+├────────────────────────────────┼───────────────────────────────────────┤
+│ max_epoch                      │ 300                                   │
+├────────────────────────────────┼───────────────────────────────────────┤
+│ close_mosaic_epochs            │ 50                                    │
+├────────────────────────────────┼───────────────────────────────────────┤
+│ lr_per_img                     │ 0.00015625                            │
+├────────────────────────────────┼───────────────────────────────────────┤
+│ warmup_epochs                  │ 5                                     │
+├────────────────────────────────┼───────────────────────────────────────┤
+│ warmup_lr_ratio                │ 0.0                                   │
+├────────────────────────────────┼───────────────────────────────────────┤
+│ final_lr_ratio                 │ 0.04                                  │
+├────────────────────────────────┼───────────────────────────────────────┤
+│ loss_use                       │ ['bce', 'bce', 'giou']                │
+├────────────────────────────────┼───────────────────────────────────────┤
+│ input_size                     │ [640, 640]                            │
+├────────────────────────────────┼───────────────────────────────────────┤
+│ multiscale_range               │ 5                                     │
+├────────────────────────────────┼───────────────────────────────────────┤
+│ weight_decay                   │ 0.0005                                │
+├────────────────────────────────┼───────────────────────────────────────┤
+│ momentum                       │ 0.9                                   │
+├────────────────────────────────┼───────────────────────────────────────┤
+│ enhance_mosaic                 │ False                                 │
+├────────────────────────────────┼───────────────────────────────────────┤
+│ use_ema                        │ True                                  │
+├────────────────────────────────┼───────────────────────────────────────┤
+│ enable_mixup                   │ True                                  │
+├────────────────────────────────┼───────────────────────────────────────┤
+│ mixup_scale                    │ [0.5, 1.5]                            │
+├────────────────────────────────┼───────────────────────────────────────┤
+│ mosaic_scale                   │ [0.1, 1.9]                            │
+├────────────────────────────────┼───────────────────────────────────────┤
+│ flip_prob                      │ 0.5                                   │
+├────────────────────────────────┼───────────────────────────────────────┤
+│ mosaic_prob                    │ 0.8                                   │
+├────────────────────────────────┼───────────────────────────────────────┤
+│ mixup_prob                     │ 0.445                                 │
+├────────────────────────────────┼───────────────────────────────────────┤
+│ degrees                        │ 10                                    │
+├────────────────────────────────┼───────────────────────────────────────┤
+│ hsv_gain                       │ [0.0138, 0.664, 0.464]                │
+├────────────────────────────────┼───────────────────────────────────────┤
+│ eval_at_start                  │ False                                 │
+├────────────────────────────────┼───────────────────────────────────────┤
+│ val_conf_thres                 │ 0.001                                 │
+├────────────────────────────────┼───────────────────────────────────────┤
+│ val_nms_thres                  │ 0.65                                  │
+├────────────────────────────────┼───────────────────────────────────────┤
+│ eval_only                      │ False                                 │
+├────────────────────────────────┼───────────────────────────────────────┤
+│ obj_conf_enabled               │ True                                  │
+├────────────────────────────────┼───────────────────────────────────────┤
+│ eval_interval                  │ 1                                     │
+├────────────────────────────────┼───────────────────────────────────────┤
+│ print_interval                 │ 25                                    │
+├────────────────────────────────┼───────────────────────────────────────┤
+│ load_optimizer_params          │ True                                  │
+├────────────────────────────────┼───────────────────────────────────────┤
+│ train_backbone                 │ True                                  │
+├────────────────────────────────┼───────────────────────────────────────┤
+│ train_start_layers             │ 51                                    │
+├────────────────────────────────┼───────────────────────────────────────┤
+│ force_start_epoch              │ -1                                    │
+╘════════════════════════════════╧═══════════════════════════════════════╛
+2023-03-28 11:44:13 | INFO    | edgeyolo.train.trainer:before_train:334 - num classes: 10
+2023-03-28 11:44:15 | INFO    | edgeyolo.train.trainer:before_train:335 - Params: 41.18M, Gflops: 126.41
+2023-03-28 11:44:15 | INFO    | edgeyolo.train.trainer:load_loss:246 - loading loss...
+2023-03-28 11:44:15 | INFO    | edgeyolo.train.trainer:load_optimizer:223 - loading optimizer...
+2023-03-28 11:44:15 | INFO    | edgeyolo.train.trainer:load_dataloader:116 - loading dataset...
+2023-03-28 11:44:15 | INFO    | edgeyolo.train.trainer:load_dataloader:168 - init data prefetcher...
+2023-03-28 11:44:15 | INFO    | edgeyolo.train.trainer:load_dataloader:178 - prefetcher loaded!
+2023-03-28 11:44:15 | INFO    | edgeyolo.train.trainer:load_lr_scheduler:256 - init learning rate scheduler...
+2023-03-28 11:44:15 | INFO    | edgeyolo.train.trainer:load_evaluator:184 - loading evaluator...
+2023-03-28 11:44:15 | INFO    | edgeyolo.train.trainer:load_evaluator:219 - evaluator loaded.
+2023-03-28 11:44:16 | INFO    | edgeyolo.train.trainer:before_train:354 - Training start...
+2023-03-28 11:44:16 | INFO    | edgeyolo.train.trainer:before_train:356 - 
+Model(
+  (model): Sequential(
+    (0): Conv(
+      (conv): Conv2d(3, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn): BatchNorm2d(32, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (1): Conv(
+      (conv): Conv2d(32, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (bn): BatchNorm2d(64, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (2): Conv(
+      (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn): BatchNorm2d(64, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (3): Conv(
+      (conv): Conv2d(64, 128, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (bn): BatchNorm2d(128, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (4): Conv(
+      (conv): Conv2d(128, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(64, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (5): Conv(
+      (conv): Conv2d(128, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(64, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (6): Conv(
+      (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn): BatchNorm2d(64, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (7): Conv(
+      (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn): BatchNorm2d(64, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (8): Conv(
+      (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn): BatchNorm2d(64, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (9): Conv(
+      (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn): BatchNorm2d(64, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (10): Concat()
+    (11): Conv(
+      (conv): Conv2d(256, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (12): MP(
+      (m): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    )
+    (13): Conv(
+      (conv): Conv2d(256, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(128, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (14): Conv(
+      (conv): Conv2d(256, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(128, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (15): Conv(
+      (conv): Conv2d(128, 128, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (bn): BatchNorm2d(128, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (16): Concat()
+    (17): Conv(
+      (conv): Conv2d(256, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(128, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (18): Conv(
+      (conv): Conv2d(256, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(128, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (19): Conv(
+      (conv): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn): BatchNorm2d(128, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (20): Conv(
+      (conv): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn): BatchNorm2d(128, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (21): Conv(
+      (conv): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn): BatchNorm2d(128, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (22): Conv(
+      (conv): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn): BatchNorm2d(128, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (23): Concat()
+    (24): Conv(
+      (conv): Conv2d(512, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(512, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (25): MP(
+      (m): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    )
+    (26): Conv(
+      (conv): Conv2d(512, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (27): Conv(
+      (conv): Conv2d(512, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (28): Conv(
+      (conv): Conv2d(256, 256, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (bn): BatchNorm2d(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (29): Concat()
+    (30): Conv(
+      (conv): Conv2d(512, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (31): Conv(
+      (conv): Conv2d(512, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (32): Conv(
+      (conv): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn): BatchNorm2d(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (33): Conv(
+      (conv): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn): BatchNorm2d(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (34): Conv(
+      (conv): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn): BatchNorm2d(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (35): Conv(
+      (conv): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn): BatchNorm2d(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (36): Concat()
+    (37): Conv(
+      (conv): Conv2d(1024, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(1024, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (38): MP(
+      (m): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    )
+    (39): Conv(
+      (conv): Conv2d(1024, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(512, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (40): Conv(
+      (conv): Conv2d(1024, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(512, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (41): Conv(
+      (conv): Conv2d(512, 512, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (bn): BatchNorm2d(512, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (42): Concat()
+    (43): Conv(
+      (conv): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (44): Conv(
+      (conv): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (45): Conv(
+      (conv): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn): BatchNorm2d(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (46): Conv(
+      (conv): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn): BatchNorm2d(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (47): Conv(
+      (conv): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn): BatchNorm2d(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (48): Conv(
+      (conv): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn): BatchNorm2d(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (49): Concat()
+    (50): Conv(
+      (conv): Conv2d(1024, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(1024, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (51): SPPCSPC(
+      (cv1): Conv(
+        (conv): Conv2d(1024, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn): BatchNorm2d(512, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+        (act): SiLU()
+      )
+      (cv2): Conv(
+        (conv): Conv2d(1024, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn): BatchNorm2d(512, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+        (act): SiLU()
+      )
+      (cv3): Conv(
+        (conv): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn): BatchNorm2d(512, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+        (act): SiLU()
+      )
+      (cv4): Conv(
+        (conv): Conv2d(512, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn): BatchNorm2d(512, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+        (act): SiLU()
+      )
+      (m): ModuleList(
+        (0): MaxPool2d(kernel_size=5, stride=1, padding=2, dilation=1, ceil_mode=False)
+        (1): MaxPool2d(kernel_size=9, stride=1, padding=4, dilation=1, ceil_mode=False)
+        (2): MaxPool2d(kernel_size=13, stride=1, padding=6, dilation=1, ceil_mode=False)
+      )
+      (cv5): Conv(
+        (conv): Conv2d(2048, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn): BatchNorm2d(512, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+        (act): SiLU()
+      )
+      (cv6): Conv(
+        (conv): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn): BatchNorm2d(512, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+        (act): SiLU()
+      )
+      (cv7): Conv(
+        (conv): Conv2d(1024, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn): BatchNorm2d(512, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+        (act): SiLU()
+      )
+    )
+    (52): Conv(
+      (conv): Conv2d(512, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (53): Upsample(scale_factor=2.0, mode='nearest')
+    (54): Conv(
+      (conv): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (55): Concat()
+    (56): Conv(
+      (conv): Conv2d(512, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (57): Conv(
+      (conv): Conv2d(512, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (58): Conv(
+      (conv): Conv2d(256, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn): BatchNorm2d(128, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (59): Conv(
+      (conv): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn): BatchNorm2d(128, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (60): Conv(
+      (conv): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn): BatchNorm2d(128, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (61): Conv(
+      (conv): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn): BatchNorm2d(128, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (62): Concat()
+    (63): Conv(
+      (conv): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (64): Conv(
+      (conv): Conv2d(256, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(128, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (65): Upsample(scale_factor=2.0, mode='nearest')
+    (66): Conv(
+      (conv): Conv2d(512, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(128, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (67): Concat()
+    (68): Conv(
+      (conv): Conv2d(256, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(128, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (69): Conv(
+      (conv): Conv2d(256, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(128, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (70): Conv(
+      (conv): Conv2d(128, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn): BatchNorm2d(64, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (71): Conv(
+      (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn): BatchNorm2d(64, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (72): Conv(
+      (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn): BatchNorm2d(64, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (73): Conv(
+      (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn): BatchNorm2d(64, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (74): Concat()
+    (75): Conv(
+      (conv): Conv2d(512, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(128, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (76): MP(
+      (m): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    )
+    (77): Conv(
+      (conv): Conv2d(128, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(128, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (78): Conv(
+      (conv): Conv2d(128, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(128, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (79): Conv(
+      (conv): Conv2d(128, 128, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (bn): BatchNorm2d(128, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (80): Concat()
+    (81): Conv(
+      (conv): Conv2d(512, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (82): Conv(
+      (conv): Conv2d(512, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (83): Conv(
+      (conv): Conv2d(256, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn): BatchNorm2d(128, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (84): Conv(
+      (conv): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn): BatchNorm2d(128, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (85): Conv(
+      (conv): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn): BatchNorm2d(128, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (86): Conv(
+      (conv): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn): BatchNorm2d(128, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (87): Concat()
+    (88): Conv(
+      (conv): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (89): MP(
+      (m): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    )
+    (90): Conv(
+      (conv): Conv2d(256, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (91): Conv(
+      (conv): Conv2d(256, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (92): Conv(
+      (conv): Conv2d(256, 256, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (bn): BatchNorm2d(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (93): Concat()
+    (94): Conv(
+      (conv): Conv2d(1024, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(512, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (95): Conv(
+      (conv): Conv2d(1024, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(512, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (96): Conv(
+      (conv): Conv2d(512, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn): BatchNorm2d(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (97): Conv(
+      (conv): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn): BatchNorm2d(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (98): Conv(
+      (conv): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn): BatchNorm2d(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (99): Conv(
+      (conv): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn): BatchNorm2d(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (100): Concat()
+    (101): Conv(
+      (conv): Conv2d(2048, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(512, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (102): RepConv(
+      (act): SiLU()
+      (rbr_dense): Sequential(
+        (0): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (1): BatchNorm2d(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      )
+      (rbr_1x1): Sequential(
+        (0): Conv2d(128, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (1): BatchNorm2d(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      )
+    )
+    (103): RepConv(
+      (act): SiLU()
+      (rbr_dense): Sequential(
+        (0): Conv2d(256, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (1): BatchNorm2d(512, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      )
+      (rbr_1x1): Sequential(
+        (0): Conv2d(256, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (1): BatchNorm2d(512, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      )
+    )
+    (104): RepConv(
+      (act): SiLU()
+      (rbr_dense): Sequential(
+        (0): Conv2d(512, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (1): BatchNorm2d(1024, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      )
+      (rbr_1x1): Sequential(
+        (0): Conv2d(512, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (1): BatchNorm2d(1024, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      )
+    )
+    (105): YOLOXDetect(
+      (stems): ModuleList(
+        (0): Conv(
+          (conv): Conv2d(256, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (bn): BatchNorm2d(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+          (act): SiLU()
+        )
+        (1): Conv(
+          (conv): Conv2d(512, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (bn): BatchNorm2d(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+          (act): SiLU()
+        )
+        (2): Conv(
+          (conv): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (bn): BatchNorm2d(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+          (act): SiLU()
+        )
+      )
+      (cls_convs): ModuleList(
+        (0-2): 3 x Conv(
+          (conv): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (bn): BatchNorm2d(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+          (act): SiLU()
+        )
+      )
+      (reg_convs): ModuleList(
+        (0-2): 3 x Conv(
+          (conv): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (bn): BatchNorm2d(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+          (act): SiLU()
+        )
+      )
+      (cls_preds): ModuleList(
+        (0-2): 3 x Conv2d(256, 10, kernel_size=(1, 1), stride=(1, 1))
+      )
+      (reg_preds): ModuleList(
+        (0-2): 3 x Conv2d(256, 4, kernel_size=(1, 1), stride=(1, 1))
+      )
+      (obj_preds): ModuleList(
+        (0-2): 3 x Conv2d(256, 1, kernel_size=(1, 1), stride=(1, 1))
+      )
+      (ia): ModuleList(
+        (0-2): 3 x ImplicitA()
+      )
+      (im): ModuleList(
+        (0-2): 3 x ImplicitM()
+      )
+    )
+  )
+)
+2023-03-28 11:44:16 | INFO    | edgeyolo.train.trainer:before_epoch:379 - Start Train Epoch 1 
+2023-03-28 11:44:21 | INFO    | edgeyolo.train.trainer:after_iter:457 - epoch:1/300 iter:25/1545 mem:2714MB t_iter:0.11 lr:1.636e-09 loss:{total:15.68 iou:2.19 conf:10.40 cls:3.09} ETA:1 day, 6:03:51
+2023-03-28 11:44:25 | INFO    | edgeyolo.train.trainer:after_iter:457 - epoch:1/300 iter:50/1545 mem:2714MB t_iter:0.15 lr:6.546e-09 loss:{total:9.69 iou:1.85 conf:5.61 cls:2.23} ETA:1 day, 1:43:24
+2023-03-28 11:44:29 | INFO    | edgeyolo.train.trainer:after_iter:457 - epoch:1/300 iter:75/1545 mem:2714MB t_iter:0.10 lr:1.473e-08 loss:{total:16.20 iou:2.03 conf:11.11 cls:3.06} ETA:23:19:10
+2023-03-28 11:44:33 | INFO    | edgeyolo.train.trainer:after_iter:457 - epoch:1/300 iter:100/1545 mem:2714MB t_iter:0.12 lr:2.618e-08 loss:{total:38.33 iou:2.50 conf:32.69 cls:3.15} ETA:22:25:49
+2023-03-28 11:44:37 | INFO    | edgeyolo.train.trainer:after_iter:457 - epoch:1/300 iter:125/1545 mem:2714MB t_iter:0.11 lr:4.091e-08 loss:{total:13.23 iou:1.49 conf:10.66 cls:1.08} ETA:21:42:55
+2023-03-28 11:44:40 | INFO    | edgeyolo.train.trainer:after_iter:457 - epoch:1/300 iter:150/1545 mem:2714MB t_iter:0.16 lr:5.891e-08 loss:{total:9.74 iou:1.58 conf:6.15 cls:2.00} ETA:21:24:27
+2023-03-28 11:44:44 | INFO    | edgeyolo.train.trainer:after_iter:457 - epoch:1/300 iter:175/1545 mem:2714MB t_iter:0.13 lr:8.019e-08 loss:{total:15.11 iou:1.11 conf:10.12 cls:3.89} ETA:21:13:20
+2023-03-28 11:44:48 | INFO    | edgeyolo.train.trainer:after_iter:457 - epoch:1/300 iter:200/1545 mem:2714MB t_iter:0.13 lr:1.047e-07 loss:{total:14.74 iou:2.09 conf:11.33 cls:1.32} ETA:21:01:10
+2023-03-28 11:44:52 | INFO    | edgeyolo.train.trainer:after_iter:457 - epoch:1/300 iter:225/1545 mem:2714MB t_iter:0.19 lr:1.326e-07 loss:{total:9.37 iou:1.86 conf:4.78 cls:2.74} ETA:20:53:05
+2023-03-28 11:44:56 | INFO    | edgeyolo.train.trainer:after_iter:457 - epoch:1/300 iter:250/1545 mem:2714MB t_iter:0.15 lr:1.636e-07 loss:{total:17.12 iou:2.94 conf:11.95 cls:2.24} ETA:20:55:15
+2023-03-28 11:45:00 | INFO    | edgeyolo.train.trainer:after_iter:457 - epoch:1/300 iter:275/1545 mem:2714MB t_iter:0.17 lr:1.980e-07 loss:{total:11.39 iou:1.28 conf:6.77 cls:3.34} ETA:20:46:34
+2023-03-28 11:45:04 | INFO    | edgeyolo.train.trainer:after_iter:457 - epoch:1/300 iter:300/1545 mem:2714MB t_iter:0.14 lr:2.356e-07 loss:{total:8.23 iou:1.49 conf:3.53 cls:3.21} ETA:20:42:28
+2023-03-28 11:45:08 | INFO    | edgeyolo.train.trainer:after_iter:457 - epoch:1/300 iter:325/1545 mem:2714MB t_iter:0.14 lr:2.766e-07 loss:{total:6.11 iou:1.79 conf:3.50 cls:0.82} ETA:20:39:22
+2023-03-28 11:45:12 | INFO    | edgeyolo.train.trainer:after_iter:457 - epoch:1/300 iter:350/1545 mem:2714MB t_iter:0.18 lr:3.207e-07 loss:{total:16.10 iou:2.95 conf:10.79 cls:2.36} ETA:20:37:41
+2023-03-28 11:45:15 | INFO    | edgeyolo.train.trainer:after_iter:457 - epoch:1/300 iter:375/1545 mem:2714MB t_iter:0.16 lr:3.682e-07 loss:{total:4.64 iou:1.01 conf:2.52 cls:1.12} ETA:20:33:50
+2023-03-28 11:45:19 | INFO    | edgeyolo.train.trainer:after_iter:457 - epoch:1/300 iter:400/1545 mem:2714MB t_iter:0.20 lr:4.189e-07 loss:{total:15.40 iou:7.83 conf:7.04 cls:0.53} ETA:20:33:41
+2023-03-28 11:45:23 | INFO    | edgeyolo.train.trainer:after_iter:457 - epoch:1/300 iter:425/1545 mem:2714MB t_iter:0.15 lr:4.729e-07 loss:{total:6.68 iou:1.76 conf:3.86 cls:1.06} ETA:20:32:48
+2023-03-28 11:45:27 | INFO    | edgeyolo.train.trainer:after_iter:457 - epoch:1/300 iter:450/1545 mem:2714MB t_iter:0.13 lr:5.302e-07 loss:{total:8.19 iou:1.62 conf:4.81 cls:1.76} ETA:20:33:34
+2023-03-28 11:45:31 | INFO    | edgeyolo.train.trainer:after_iter:457 - epoch:1/300 iter:475/1545 mem:2714MB t_iter:0.11 lr:5.908e-07 loss:{total:9.10 iou:0.91 conf:5.50 cls:2.69} ETA:20:32:52
+2023-03-28 11:45:35 | INFO    | edgeyolo.train.trainer:after_iter:457 - epoch:1/300 iter:500/1545 mem:2714MB t_iter:0.12 lr:6.546e-07 loss:{total:7.36 iou:1.80 conf:3.34 cls:2.23} ETA:20:32:51
+2023-03-28 11:45:39 | INFO    | edgeyolo.train.trainer:after_iter:457 - epoch:1/300 iter:525/1545 mem:2714MB t_iter:0.17 lr:7.217e-07 loss:{total:6.16 iou:1.69 conf:3.71 cls:0.76} ETA:20:32:25
+2023-03-28 11:45:43 | INFO    | edgeyolo.train.trainer:after_iter:457 - epoch:1/300 iter:550/1545 mem:2714MB t_iter:0.15 lr:7.920e-07 loss:{total:8.67 iou:1.18 conf:4.56 cls:2.93} ETA:20:32:38
+2023-03-28 11:45:47 | INFO    | edgeyolo.train.trainer:after_iter:457 - epoch:1/300 iter:575/1545 mem:2714MB t_iter:0.13 lr:8.657e-07 loss:{total:8.19 iou:2.52 conf:4.36 cls:1.31} ETA:20:31:55
+2023-03-28 11:45:51 | INFO    | edgeyolo.train.trainer:after_iter:457 - epoch:1/300 iter:600/1545 mem:2714MB t_iter:0.17 lr:9.426e-07 loss:{total:4.83 iou:1.27 conf:2.93 cls:0.63} ETA:20:33:51
+2023-03-28 11:46:17 | INFO    | edgeyolo.models:__init__:50 - loading models from weight /home/balezz/PycharmProjects/edgeyolo/models/edgeyolo_visdrone.pth
+2023-03-28 11:46:19 | INFO    | edgeyolo.train.trainer:before_train:333 - params:
+╒════════════════════════════════╤═══════════════════════════════════════╕
+│ Keywords                       │ Values                                │
+╞════════════════════════════════╪═══════════════════════════════════════╡
+│ model_cfg                      │ params/model/edgeyolo_lacmus.yaml     │
+├────────────────────────────────┼───────────────────────────────────────┤
+│ weights                        │ models/edgeyolo_visdrone.pth          │
+├────────────────────────────────┼───────────────────────────────────────┤
+│ use_cfg                        │ False                                 │
+├────────────────────────────────┼───────────────────────────────────────┤
+│ output_dir                     │ output/train/edgeyolo_lacmus_visdrone │
+├────────────────────────────────┼───────────────────────────────────────┤
+│ save_checkpoint_for_each_epoch │ True                                  │
+├────────────────────────────────┼───────────────────────────────────────┤
+│ log_file                       │ log.txt                               │
+├────────────────────────────────┼───────────────────────────────────────┤
+│ dataset_cfg                    │ data/lacmus-visdrone.yaml             │
+├────────────────────────────────┼───────────────────────────────────────┤
+│ batch_size_per_gpu             │ 2                                     │
+├────────────────────────────────┼───────────────────────────────────────┤
+│ loader_num_workers             │ 1                                     │
+├────────────────────────────────┼───────────────────────────────────────┤
+│ num_threads                    │ 1                                     │
+├────────────────────────────────┼───────────────────────────────────────┤
+│ device                         │ [0]                                   │
+├────────────────────────────────┼───────────────────────────────────────┤
+│ fp16                           │ False                                 │
+├────────────────────────────────┼───────────────────────────────────────┤
+│ cudnn_benchmark                │ False                                 │
+├────────────────────────────────┼───────────────────────────────────────┤
+│ optimizer                      │ SGD                                   │
+├────────────────────────────────┼───────────────────────────────────────┤
+│ max_epoch                      │ 300                                   │
+├────────────────────────────────┼───────────────────────────────────────┤
+│ close_mosaic_epochs            │ 50                                    │
+├────────────────────────────────┼───────────────────────────────────────┤
+│ lr_per_img                     │ 0.00015625                            │
+├────────────────────────────────┼───────────────────────────────────────┤
+│ warmup_epochs                  │ 5                                     │
+├────────────────────────────────┼───────────────────────────────────────┤
+│ warmup_lr_ratio                │ 0.0                                   │
+├────────────────────────────────┼───────────────────────────────────────┤
+│ final_lr_ratio                 │ 0.04                                  │
+├────────────────────────────────┼───────────────────────────────────────┤
+│ loss_use                       │ ['bce', 'bce', 'giou']                │
+├────────────────────────────────┼───────────────────────────────────────┤
+│ input_size                     │ [640, 640]                            │
+├────────────────────────────────┼───────────────────────────────────────┤
+│ multiscale_range               │ 5                                     │
+├────────────────────────────────┼───────────────────────────────────────┤
+│ weight_decay                   │ 0.0005                                │
+├────────────────────────────────┼───────────────────────────────────────┤
+│ momentum                       │ 0.9                                   │
+├────────────────────────────────┼───────────────────────────────────────┤
+│ enhance_mosaic                 │ False                                 │
+├────────────────────────────────┼───────────────────────────────────────┤
+│ use_ema                        │ True                                  │
+├────────────────────────────────┼───────────────────────────────────────┤
+│ enable_mixup                   │ True                                  │
+├────────────────────────────────┼───────────────────────────────────────┤
+│ mixup_scale                    │ [0.5, 1.5]                            │
+├────────────────────────────────┼───────────────────────────────────────┤
+│ mosaic_scale                   │ [0.1, 1.9]                            │
+├────────────────────────────────┼───────────────────────────────────────┤
+│ flip_prob                      │ 0.5                                   │
+├────────────────────────────────┼───────────────────────────────────────┤
+│ mosaic_prob                    │ 0.8                                   │
+├────────────────────────────────┼───────────────────────────────────────┤
+│ mixup_prob                     │ 0.445                                 │
+├────────────────────────────────┼───────────────────────────────────────┤
+│ degrees                        │ 10                                    │
+├────────────────────────────────┼───────────────────────────────────────┤
+│ hsv_gain                       │ [0.0138, 0.664, 0.464]                │
+├────────────────────────────────┼───────────────────────────────────────┤
+│ eval_at_start                  │ False                                 │
+├────────────────────────────────┼───────────────────────────────────────┤
+│ val_conf_thres                 │ 0.001                                 │
+├────────────────────────────────┼───────────────────────────────────────┤
+│ val_nms_thres                  │ 0.65                                  │
+├────────────────────────────────┼───────────────────────────────────────┤
+│ eval_only                      │ False                                 │
+├────────────────────────────────┼───────────────────────────────────────┤
+│ obj_conf_enabled               │ True                                  │
+├────────────────────────────────┼───────────────────────────────────────┤
+│ eval_interval                  │ 1                                     │
+├────────────────────────────────┼───────────────────────────────────────┤
+│ print_interval                 │ 25                                    │
+├────────────────────────────────┼───────────────────────────────────────┤
+│ load_optimizer_params          │ True                                  │
+├────────────────────────────────┼───────────────────────────────────────┤
+│ train_backbone                 │ True                                  │
+├────────────────────────────────┼───────────────────────────────────────┤
+│ train_start_layers             │ 51                                    │
+├────────────────────────────────┼───────────────────────────────────────┤
+│ force_start_epoch              │ -1                                    │
+╘════════════════════════════════╧═══════════════════════════════════════╛
+2023-03-28 11:46:19 | INFO    | edgeyolo.train.trainer:before_train:334 - num classes: 10
+2023-03-28 11:46:20 | INFO    | edgeyolo.train.trainer:before_train:335 - Params: 41.18M, Gflops: 126.41
+2023-03-28 11:46:20 | INFO    | edgeyolo.train.trainer:load_loss:246 - loading loss...
+2023-03-28 11:46:20 | INFO    | edgeyolo.train.trainer:load_optimizer:223 - loading optimizer...
+2023-03-28 11:46:20 | INFO    | edgeyolo.train.trainer:load_dataloader:116 - loading dataset...
+2023-03-28 11:46:20 | INFO    | edgeyolo.train.trainer:load_dataloader:168 - init data prefetcher...
+2023-03-28 11:46:20 | INFO    | edgeyolo.train.trainer:load_dataloader:178 - prefetcher loaded!
+2023-03-28 11:46:20 | INFO    | edgeyolo.train.trainer:load_lr_scheduler:256 - init learning rate scheduler...
+2023-03-28 11:46:20 | INFO    | edgeyolo.train.trainer:load_evaluator:184 - loading evaluator...
+2023-03-28 11:46:20 | INFO    | edgeyolo.train.trainer:load_evaluator:219 - evaluator loaded.
+2023-03-28 11:46:20 | INFO    | edgeyolo.train.trainer:before_train:354 - Training start...
+2023-03-28 11:46:20 | INFO    | edgeyolo.train.trainer:before_train:356 - 
+Model(
+  (model): Sequential(
+    (0): Conv(
+      (conv): Conv2d(3, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn): BatchNorm2d(32, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (1): Conv(
+      (conv): Conv2d(32, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (bn): BatchNorm2d(64, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (2): Conv(
+      (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn): BatchNorm2d(64, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (3): Conv(
+      (conv): Conv2d(64, 128, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (bn): BatchNorm2d(128, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (4): Conv(
+      (conv): Conv2d(128, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(64, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (5): Conv(
+      (conv): Conv2d(128, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(64, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (6): Conv(
+      (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn): BatchNorm2d(64, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (7): Conv(
+      (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn): BatchNorm2d(64, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (8): Conv(
+      (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn): BatchNorm2d(64, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (9): Conv(
+      (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn): BatchNorm2d(64, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (10): Concat()
+    (11): Conv(
+      (conv): Conv2d(256, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (12): MP(
+      (m): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    )
+    (13): Conv(
+      (conv): Conv2d(256, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(128, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (14): Conv(
+      (conv): Conv2d(256, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(128, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (15): Conv(
+      (conv): Conv2d(128, 128, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (bn): BatchNorm2d(128, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (16): Concat()
+    (17): Conv(
+      (conv): Conv2d(256, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(128, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (18): Conv(
+      (conv): Conv2d(256, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(128, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (19): Conv(
+      (conv): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn): BatchNorm2d(128, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (20): Conv(
+      (conv): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn): BatchNorm2d(128, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (21): Conv(
+      (conv): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn): BatchNorm2d(128, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (22): Conv(
+      (conv): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn): BatchNorm2d(128, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (23): Concat()
+    (24): Conv(
+      (conv): Conv2d(512, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(512, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (25): MP(
+      (m): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    )
+    (26): Conv(
+      (conv): Conv2d(512, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (27): Conv(
+      (conv): Conv2d(512, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (28): Conv(
+      (conv): Conv2d(256, 256, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (bn): BatchNorm2d(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (29): Concat()
+    (30): Conv(
+      (conv): Conv2d(512, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (31): Conv(
+      (conv): Conv2d(512, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (32): Conv(
+      (conv): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn): BatchNorm2d(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (33): Conv(
+      (conv): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn): BatchNorm2d(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (34): Conv(
+      (conv): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn): BatchNorm2d(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (35): Conv(
+      (conv): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn): BatchNorm2d(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (36): Concat()
+    (37): Conv(
+      (conv): Conv2d(1024, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(1024, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (38): MP(
+      (m): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    )
+    (39): Conv(
+      (conv): Conv2d(1024, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(512, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (40): Conv(
+      (conv): Conv2d(1024, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(512, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (41): Conv(
+      (conv): Conv2d(512, 512, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (bn): BatchNorm2d(512, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (42): Concat()
+    (43): Conv(
+      (conv): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (44): Conv(
+      (conv): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (45): Conv(
+      (conv): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn): BatchNorm2d(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (46): Conv(
+      (conv): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn): BatchNorm2d(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (47): Conv(
+      (conv): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn): BatchNorm2d(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (48): Conv(
+      (conv): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn): BatchNorm2d(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (49): Concat()
+    (50): Conv(
+      (conv): Conv2d(1024, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(1024, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (51): SPPCSPC(
+      (cv1): Conv(
+        (conv): Conv2d(1024, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn): BatchNorm2d(512, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+        (act): SiLU()
+      )
+      (cv2): Conv(
+        (conv): Conv2d(1024, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn): BatchNorm2d(512, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+        (act): SiLU()
+      )
+      (cv3): Conv(
+        (conv): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn): BatchNorm2d(512, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+        (act): SiLU()
+      )
+      (cv4): Conv(
+        (conv): Conv2d(512, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn): BatchNorm2d(512, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+        (act): SiLU()
+      )
+      (m): ModuleList(
+        (0): MaxPool2d(kernel_size=5, stride=1, padding=2, dilation=1, ceil_mode=False)
+        (1): MaxPool2d(kernel_size=9, stride=1, padding=4, dilation=1, ceil_mode=False)
+        (2): MaxPool2d(kernel_size=13, stride=1, padding=6, dilation=1, ceil_mode=False)
+      )
+      (cv5): Conv(
+        (conv): Conv2d(2048, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn): BatchNorm2d(512, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+        (act): SiLU()
+      )
+      (cv6): Conv(
+        (conv): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn): BatchNorm2d(512, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+        (act): SiLU()
+      )
+      (cv7): Conv(
+        (conv): Conv2d(1024, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn): BatchNorm2d(512, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+        (act): SiLU()
+      )
+    )
+    (52): Conv(
+      (conv): Conv2d(512, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (53): Upsample(scale_factor=2.0, mode='nearest')
+    (54): Conv(
+      (conv): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (55): Concat()
+    (56): Conv(
+      (conv): Conv2d(512, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (57): Conv(
+      (conv): Conv2d(512, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (58): Conv(
+      (conv): Conv2d(256, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn): BatchNorm2d(128, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (59): Conv(
+      (conv): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn): BatchNorm2d(128, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (60): Conv(
+      (conv): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn): BatchNorm2d(128, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (61): Conv(
+      (conv): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn): BatchNorm2d(128, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (62): Concat()
+    (63): Conv(
+      (conv): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (64): Conv(
+      (conv): Conv2d(256, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(128, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (65): Upsample(scale_factor=2.0, mode='nearest')
+    (66): Conv(
+      (conv): Conv2d(512, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(128, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (67): Concat()
+    (68): Conv(
+      (conv): Conv2d(256, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(128, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (69): Conv(
+      (conv): Conv2d(256, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(128, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (70): Conv(
+      (conv): Conv2d(128, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn): BatchNorm2d(64, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (71): Conv(
+      (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn): BatchNorm2d(64, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (72): Conv(
+      (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn): BatchNorm2d(64, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (73): Conv(
+      (conv): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn): BatchNorm2d(64, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (74): Concat()
+    (75): Conv(
+      (conv): Conv2d(512, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(128, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (76): MP(
+      (m): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    )
+    (77): Conv(
+      (conv): Conv2d(128, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(128, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (78): Conv(
+      (conv): Conv2d(128, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(128, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (79): Conv(
+      (conv): Conv2d(128, 128, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (bn): BatchNorm2d(128, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (80): Concat()
+    (81): Conv(
+      (conv): Conv2d(512, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (82): Conv(
+      (conv): Conv2d(512, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (83): Conv(
+      (conv): Conv2d(256, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn): BatchNorm2d(128, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (84): Conv(
+      (conv): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn): BatchNorm2d(128, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (85): Conv(
+      (conv): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn): BatchNorm2d(128, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (86): Conv(
+      (conv): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn): BatchNorm2d(128, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (87): Concat()
+    (88): Conv(
+      (conv): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (89): MP(
+      (m): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    )
+    (90): Conv(
+      (conv): Conv2d(256, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (91): Conv(
+      (conv): Conv2d(256, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (92): Conv(
+      (conv): Conv2d(256, 256, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (bn): BatchNorm2d(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (93): Concat()
+    (94): Conv(
+      (conv): Conv2d(1024, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(512, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (95): Conv(
+      (conv): Conv2d(1024, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(512, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (96): Conv(
+      (conv): Conv2d(512, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn): BatchNorm2d(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (97): Conv(
+      (conv): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn): BatchNorm2d(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (98): Conv(
+      (conv): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn): BatchNorm2d(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (99): Conv(
+      (conv): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn): BatchNorm2d(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (100): Concat()
+    (101): Conv(
+      (conv): Conv2d(2048, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(512, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      (act): SiLU()
+    )
+    (102): RepConv(
+      (act): SiLU()
+      (rbr_dense): Sequential(
+        (0): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (1): BatchNorm2d(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      )
+      (rbr_1x1): Sequential(
+        (0): Conv2d(128, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (1): BatchNorm2d(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      )
+    )
+    (103): RepConv(
+      (act): SiLU()
+      (rbr_dense): Sequential(
+        (0): Conv2d(256, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (1): BatchNorm2d(512, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      )
+      (rbr_1x1): Sequential(
+        (0): Conv2d(256, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (1): BatchNorm2d(512, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      )
+    )
+    (104): RepConv(
+      (act): SiLU()
+      (rbr_dense): Sequential(
+        (0): Conv2d(512, 1024, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (1): BatchNorm2d(1024, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      )
+      (rbr_1x1): Sequential(
+        (0): Conv2d(512, 1024, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (1): BatchNorm2d(1024, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+      )
+    )
+    (105): YOLOXDetect(
+      (stems): ModuleList(
+        (0): Conv(
+          (conv): Conv2d(256, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (bn): BatchNorm2d(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+          (act): SiLU()
+        )
+        (1): Conv(
+          (conv): Conv2d(512, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (bn): BatchNorm2d(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+          (act): SiLU()
+        )
+        (2): Conv(
+          (conv): Conv2d(1024, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (bn): BatchNorm2d(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+          (act): SiLU()
+        )
+      )
+      (cls_convs): ModuleList(
+        (0-2): 3 x Conv(
+          (conv): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (bn): BatchNorm2d(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+          (act): SiLU()
+        )
+      )
+      (reg_convs): ModuleList(
+        (0-2): 3 x Conv(
+          (conv): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (bn): BatchNorm2d(256, eps=0.001, momentum=0.03, affine=True, track_running_stats=True)
+          (act): SiLU()
+        )
+      )
+      (cls_preds): ModuleList(
+        (0-2): 3 x Conv2d(256, 10, kernel_size=(1, 1), stride=(1, 1))
+      )
+      (reg_preds): ModuleList(
+        (0-2): 3 x Conv2d(256, 4, kernel_size=(1, 1), stride=(1, 1))
+      )
+      (obj_preds): ModuleList(
+        (0-2): 3 x Conv2d(256, 1, kernel_size=(1, 1), stride=(1, 1))
+      )
+      (ia): ModuleList(
+        (0-2): 3 x ImplicitA()
+      )
+      (im): ModuleList(
+        (0-2): 3 x ImplicitM()
+      )
+    )
+  )
+)
+2023-03-28 11:46:20 | INFO    | edgeyolo.train.trainer:before_epoch:379 - Start Train Epoch 1 
+2023-03-28 11:46:27 | INFO    | edgeyolo.train.trainer:after_iter:457 - epoch:1/300 iter:25/772 mem:4584MB t_iter:0.31 lr:1.311e-08 loss:{total:8.82 iou:1.35 conf:4.74 cls:2.73} ETA:18:23:45
+2023-03-28 11:46:34 | INFO    | edgeyolo.train.trainer:after_iter:457 - epoch:1/300 iter:50/772 mem:4584MB t_iter:0.24 lr:5.243e-08 loss:{total:10.13 iou:1.60 conf:5.76 cls:2.78} ETA:17:54:38
